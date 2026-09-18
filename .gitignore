@@ -1,0 +1,10 @@
+# Dependencias de Node
+node_modules/
+
+# Archivos de base de datos SQLite
+kiosco.db
+kiosco.db-shm
+kiosco.db-wal
+
+# Variables de entorno (para el futuro)
+.env
