@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const dbPath = path.resolve(__dirname, "../kiosco.db");
-const db = new Database(dbPath, { verbose: console.log });
+export const db = new Database(dbPath, { verbose: console.log });
 
 db.pragma("journal_mode = WAL");
 
@@ -35,7 +35,7 @@ export const inicializarBaseDeDatos = () => {
       nombre TEXT NOT NULL,
       email TEXT UNIQUE NOT NULL,
       password TEXT NOT NULL,
-      rol TEXT DEFAULT 'cajero'
+      rol TEXT DEFAULT 'vendedor'
     );
 
     CREATE TABLE IF NOT EXISTS ventas (

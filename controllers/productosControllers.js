@@ -6,6 +6,7 @@ export const obtenerProductos = (req, res) => {
   try {
     const productos = db.prepare("SELECT * FROM productos").all();
     res.json(productos);
+    console.log(productos);
   } catch (err) {
     res.status(5000).josn({ error: "Error al obtener los productos" });
   }
